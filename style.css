@@ -1,0 +1,87 @@
+body {
+    background: url('image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 96vh;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    margin: 0;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px); /* Aplica o efeito de desfoque */
+    z-index: -1; /* Fica atrás do conteúdo */
+    background-color: rgba(0, 0, 0, 0.6); /* Transparência para escurecer o fundo */
+}
+
+header {
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    width: 100%; /* Ocupa toda a largura da página */
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center; /* Centraliza o título */
+    padding: 20px 0; /* Espaçamento no topo e embaixo */
+    box-shadow: 0 2px 5px rgba(116, 116, 116, 0.2); /* Adiciona sombra para destaque */
+    z-index: 2; /* Garante que o header fique acima de tudo */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-title {
+    margin: 0; /* Remove margens */
+    font-size: 60px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto do cabeçalho */
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 55%; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
+    z-index: 1; /* Garante que a div fique acima do fundo */
+    text-align: center; /* Centraliza o texto dentro da div */
+}
+
+.login-title {
+    margin: 0; /* Remove margens */
+    font-size: 50px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto do login, ajuste como desejar */
+    margin-bottom: 5px; /* Espaçamento embaixo do título do login */
+    position: relative;
+    top: -5px; /* Move o título de login 5px para cima */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.inputSubmit {
+    background-color: dodgerblue;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.inputSubmit:hover {
+    background-color: deepskyblue;
+    cursor: pointer;
+}
